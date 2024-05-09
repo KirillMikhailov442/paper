@@ -1,0 +1,55 @@
+.mobile-list{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: black;
+    z-index: 20;
+    left: 100%;
+    transition: left .5s ease;
+
+    &--show{
+        left: 0;
+    }
+
+    &__container{
+        max-width: 600px;
+        height: inherit;
+        margin-inline: auto;
+        padding-inline: 5px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__header{
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    &__button{
+        font-size: 50px;
+        color: white;
+    }
+
+    &__list{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        flex-grow: 1;
+        margin-top: 80px;
+    }
+
+    &__item{
+        font-size: 30px;
+    }
+}
+
+@media(min-width:900px){
+    .mobile-list{
+        display: none;
+    }
+}
